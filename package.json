@@ -10,8 +10,10 @@
   "scripts": {
     "dev": "nuxt dev --port 7465",
     "analyze": "nuxt analyze",
-    "test": "vitest",
-    "build": "NODE_OPTIONS=--max-old-space-size=8192 nuxt build",
+    "test": "pnpm build:test && vitest run",
+    "test:watch": "pnpm build:test && vitest",
+    "build": "node --max-old-space-size=8192 ./node_modules/nuxt/bin/nuxt.mjs build",
+    "build:test": "node --max-old-space-size=8192 ./node_modules/nuxt/bin/nuxt.mjs build --preset=cloudflare_pages",
     "build:map": "node scripts/build-map.js",
     "build:sphere": "node scripts/build-sphere.js",
     "build:colo": "node scripts/build-colo.js",
