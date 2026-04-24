@@ -1,0 +1,34 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sink-test",
+  "main": "dist/_worker.js/index.js",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "dist",
+    "html_handling": "drop-trailing-slash"
+  },
+  "compatibility_date": "2025-05-08",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "analytics_engine_datasets": [
+    {
+      "binding": "ANALYTICS",
+      "dataset": "sink"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "preview_id": "ef93d42dc4b34969bab404d2e80f8dd3",
+      "id": "ef93d42dc4b34969bab404d2e80f8dd3"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "R2",
+      "preview_bucket_name": "sink",
+      "bucket_name": "sink"
+    }
+  ]
+}
