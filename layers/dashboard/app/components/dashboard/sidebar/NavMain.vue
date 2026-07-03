@@ -37,7 +37,7 @@ watch(() => route.path, () => {
           :tooltip="t(item.title)"
           :data-active="item.isActive"
         >
-          <NuxtLink :to="item.url">
+          <NuxtLink :to="item.url" :prefetch="false">
             <component :is="item.icon" />
             <span>{{ t(item.title) }}</span>
           </NuxtLink>
@@ -55,7 +55,7 @@ watch(() => route.path, () => {
           :tooltip="t(item.title)"
           :data-active="item.isActive"
         >
-          <NuxtLink :to="item.url">
+          <NuxtLink :to="item.url" :prefetch="false">
             <component :is="item.icon" />
             <span>{{ t(item.title) }}</span>
           </NuxtLink>
