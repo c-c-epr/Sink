@@ -10,6 +10,7 @@ export default withNuxt(antfu(
       'app/components/ui/**',
       'app/data/**',
       'public/*.json',
+      '*.md',
     ],
     rules: {
       '@typescript-eslint/ban-ts-comment': 'off',
