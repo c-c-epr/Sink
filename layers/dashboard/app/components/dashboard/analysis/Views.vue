@@ -168,6 +168,7 @@ type Data = ViewDataPoint
         <!-- Tooltip -->
         <ChartTooltip />
         <ChartCrosshair
+          v-if="views.length"
           :template="componentToString(chartConfig, ChartTooltipContent, { labelKey: 'time' })"
           :color="categories.map(cat => chartConfig[cat]?.color ?? 'var(--chart-1)')"
         />

@@ -30,6 +30,9 @@ export function componentToString<P>(config: ChartConfig, component: Constructor
   // https://unovis.dev/docs/auxiliary/Crosshair#component-props
   return (_data: any, x: number | Date) => {
     const data = "data" in _data ? _data.data : _data
+    if (!data || typeof data !== 'object' || Object.keys(data).length === 0)
+      return ''
+
     const serializedKey = `${id}-${serializeKey(data)}`
     const cachedContent = cache.get(serializedKey)
     if (cachedContent)
