@@ -10,3 +10,8 @@ onlyBuiltDependencies:
   - unrs-resolver
   - vue-demi
   - workerd
+
+overrides:
+  esbuild@>=0.27.3 <0.28.1: '>=0.28.1'
+  undici@>=7.0.0 <7.24.0: '>=7.24.0'
+  ws@>=8.0.0 <8.21.0: '>=8.21.0'
