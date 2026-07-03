@@ -2,8 +2,8 @@
 import type { Link, LinkFormData } from '@/types'
 import { LinkSchema, nanoid } from '#shared/schemas/link'
 import { isMaskedLinkPassword } from '#shared/utils/link-password'
+import { ExternalLink, Shuffle, Sparkles } from '@lucide/vue'
 import { useForm } from '@tanstack/vue-form'
-import { ExternalLink, Shuffle, Sparkles } from 'lucide-vue-next'
 import { toast } from 'vue-sonner'
 import { z } from 'zod'
 

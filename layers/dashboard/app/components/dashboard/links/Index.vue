@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { CounterData, Link, LinkListResponse, LinkUpdateType } from '@/types'
+import { Loader } from '@lucide/vue'
 import { useInfiniteScroll } from '@vueuse/core'
-import { Loader } from 'lucide-vue-next'
 
 const linksStore = useDashboardLinksStore()
 

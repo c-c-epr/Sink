@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { CounterData } from '@/types'
+import { Flame, MousePointerClick, Users } from '@lucide/vue'
 import NumberFlow from '@number-flow/vue'
 import { watchThrottled } from '@vueuse/core'
-import { Flame, MousePointerClick, Users } from 'lucide-vue-next'
 
 const defaultData: CounterData = Object.freeze({
   visits: 0,

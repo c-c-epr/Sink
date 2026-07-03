@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { CounterData } from '@/types'
+import { MousePointerClick } from '@lucide/vue'
 import NumberFlow from '@number-flow/vue'
 import { watchDeep } from '@vueuse/core'
-import { MousePointerClick } from 'lucide-vue-next'
 
 provide(LINK_ID_KEY, computed(() => undefined))
 

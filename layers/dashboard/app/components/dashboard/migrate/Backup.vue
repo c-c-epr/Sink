@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CloudUpload, Loader } from 'lucide-vue-next'
+import { CloudUpload, Loader } from '@lucide/vue'
 import { toast } from 'vue-sonner'
 
 const { t } = useI18n()

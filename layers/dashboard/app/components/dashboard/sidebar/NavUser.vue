@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ChevronsUpDown, LogOut } from 'lucide-vue-next'
+import { ChevronsUpDown, LogOut } from '@lucide/vue'
 import { useSidebar } from '@/components/ui/sidebar'
 
 interface User {

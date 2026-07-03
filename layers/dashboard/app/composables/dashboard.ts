@@ -1,6 +1,6 @@
 import type { Component } from 'vue'
 import { useRoute } from '#imports'
-import { Activity, ChartArea, FolderSync, Link, ScanSearch } from 'lucide-vue-next'
+import { Activity, ChartArea, FolderSync, Link, ScanSearch } from '@lucide/vue'
 import { computed } from 'vue'
 
 export interface DashboardRouteConfig {

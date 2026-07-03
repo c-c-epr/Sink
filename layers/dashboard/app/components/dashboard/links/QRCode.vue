@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Download } from 'lucide-vue-next'
+import { Download } from '@lucide/vue'
 import QRCodeStyling from 'qr-code-styling'
 
 const props = withDefaults(defineProps<{

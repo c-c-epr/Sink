@@ -2,8 +2,8 @@
 import type { DateRange, DateValue } from 'reka-ui'
 import { createExportFilename } from '#shared/utils/export-file'
 import { getLocalTimeZone } from '@internationalized/date'
+import { Download, Loader } from '@lucide/vue'
 import { useForm } from '@tanstack/vue-form'
-import { Download, Loader } from 'lucide-vue-next'
 import { toast } from 'vue-sonner'
 import { z } from 'zod'
 

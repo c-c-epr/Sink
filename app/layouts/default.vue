@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { Menu, Star, X } from '@lucide/vue'
 import NumberFlow from '@number-flow/vue'
-import { Menu, Star, X } from 'lucide-vue-next'
 import { GitHubIcon, TelegramIcon, XIcon } from 'vue3-simple-icons'
 
 const showMenu = ref(false)

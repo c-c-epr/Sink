@@ -2,7 +2,7 @@
 import type { ImportData } from '#shared/schemas/import'
 import { ImportDataSchema } from '#shared/schemas/import'
 import { createExportFilename } from '#shared/utils/export-file'
-import { AlertCircle, CheckCircle, Download, SkipForward, Upload, XCircle } from 'lucide-vue-next'
+import { AlertCircle, CheckCircle, Download, SkipForward, Upload, XCircle } from '@lucide/vue'
 import { toast } from 'vue-sonner'
 
 interface ImportResultItem {

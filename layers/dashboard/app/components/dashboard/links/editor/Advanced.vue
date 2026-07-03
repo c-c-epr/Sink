@@ -4,7 +4,7 @@ import type { Component } from 'vue'
 import type { AnyFieldApi, LinkFormData } from '@/types'
 import { isMaskedLinkPassword, LINK_PASSWORD_MASK_PREFIX } from '#shared/utils/link-password'
 import { today } from '@internationalized/date'
-import { CalendarIcon, Plus, Sparkles, Trash2 } from 'lucide-vue-next'
+import { CalendarIcon, Plus, Sparkles, Trash2 } from '@lucide/vue'
 import { toast } from 'vue-sonner'
 import { cn } from '@/lib/utils'
 

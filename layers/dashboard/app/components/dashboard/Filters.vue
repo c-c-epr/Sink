@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Link } from '@/types'
+import { Check, ChevronsUpDown } from '@lucide/vue'
 import { createReusableTemplate, useMediaQuery, watchDebounced } from '@vueuse/core'
-import { Check, ChevronsUpDown } from 'lucide-vue-next'
 import { VList } from 'virtua/vue'
 import { cn } from '@/lib/utils'
 

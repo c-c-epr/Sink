@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { MetricItem } from '@/types'
+import { Maximize } from '@lucide/vue'
 import { watchThrottled } from '@vueuse/core'
-import { Maximize } from 'lucide-vue-next'
 
 const props = defineProps<{
   type: string

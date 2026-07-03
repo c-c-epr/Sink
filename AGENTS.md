@@ -87,7 +87,7 @@ Use `<script setup lang="ts">` always. Files: PascalCase (`LinkEditor.vue`).
 ```vue
 <script setup lang="ts">
 import type { Link } from '@/types'
-import { Copy } from 'lucide-vue-next'
+import { Copy } from '@lucide/vue'
 
 const props = defineProps<{ link: Link }>()
 const emit = defineEmits<{ update: [link: Link] }>()
@@ -101,7 +101,7 @@ const emit = defineEmits<{ update: [link: Link] }>()
 ### Imports
 
 - **Prefer Nuxt auto-imports**: `ref`, `computed`, `useFetch`, `useState`, `useRuntimeConfig`, etc.
-- **Explicit imports for**: external libs, types (`import type { Link } from '@/types'`), icons (`import { Copy } from 'lucide-vue-next'`)
+- **Explicit imports for**: external libs, types (`import type { Link } from '@/types'`), icons (`import { Copy } from '@lucide/vue'`)
 - **Server utils are auto-imported**: Functions in `server/utils/` are available globally in server code
 
 ### Naming Conventions
@@ -175,7 +175,7 @@ Use `describe.sequential` for tests that share state (most API tests).
 - Use `ResponsiveModal` for mobile-optimized dialogs
 - Use Tailwind CSS v4 for styling (`@import 'tailwindcss'` syntax)
 - Use static English for `aria-label` (no `$t()` translations)
-- Icons from `lucide-vue-next`
+- Icons from `@lucide/vue`
 
 ## Commits
 
