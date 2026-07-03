@@ -1,5 +1,7 @@
+minimumReleaseAge: 1440
+
 onlyBuiltDependencies:
-  - '@tailwindcss/oxide'
+  - "@tailwindcss/oxide"
   - esbuild
   - maplibre-gl
   - sharp
