@@ -22,11 +22,11 @@
     "types:check": "nuxt typecheck",
     "wrangler": "wrangler",
     "gen:types": "wrangler types",
-    "deploy": "npm run deploy:pages",
+    "deploy": "pnpm run deploy:pages",
     "deploy:pages": "wrangler pages deploy dist",
     "deploy:worker": "wrangler deploy .output/server/index.mjs --assets .output/public",
     "preview": "wrangler dev .output/server/index.mjs --assets .output/public ",
-    "postinstall": "npm run build:map && nuxt prepare",
+    "postinstall": "pnpm run build:map && nuxt prepare",
     "prepare": "simple-git-hooks"
   },
   "devDependencies": {
@@ -96,7 +96,7 @@
     "zod": "^3.25.76"
   },
   "simple-git-hooks": {
-    "pre-commit": "npm run lint-staged"
+    "pre-commit": "pnpm run lint-staged"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,vue}": [
