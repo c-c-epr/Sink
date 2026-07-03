@@ -4,6 +4,9 @@ import { destr } from 'destr'
 import { z } from 'zod'
 import { stripCodeFence } from '../../utils/ai'
 
+const NON_ALNUM_REGEX = /[^A-Z0-9-]/gi
+const TRIM_HYPHENS_REGEX = /^-+|-+$/g
+
 defineRouteMeta({
   openAPI: {
     description: 'Generate a slug using AI based on the URL',
@@ -33,9 +36,9 @@ function fallbackSlug(event: H3Event, url: string): string {
   }
 
   const sanitizedSlug = source
-    .replace(/[^A-Z0-9-]/gi, '-')
+    .replace(NON_ALNUM_REGEX, '-')
     .slice(0, 50)
-    .replace(/^-+|-+$/g, '') || 'link'
+    .replace(TRIM_HYPHENS_REGEX, '') || 'link'
 
   return normalizeSlug(event, sanitizedSlug)
 }

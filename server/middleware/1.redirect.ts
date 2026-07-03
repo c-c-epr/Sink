@@ -48,7 +48,13 @@ function hasOgConfig(link: Link): boolean {
 }
 
 export default eventHandler(async (event) => {
-  const { pathname: slug } = parsePath(event.path.replace(/^\/|\/$/g, ''))
+  let path = event.path
+
+  if (path.startsWith('/'))
+    path = path.slice(1)
+  if (path.endsWith('/'))
+    path = path.slice(0, -1)
+  const { pathname: slug } = parsePath(path)
   const { slugRegex, reserveSlug } = useAppConfig()
   const { homeURL, linkCacheTtl, caseSensitive, redirectWithQuery, redirectStatusCode } = useRuntimeConfig(event)
   const { cloudflare } = event.context

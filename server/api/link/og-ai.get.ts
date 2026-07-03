@@ -4,6 +4,8 @@ import { destr } from 'destr'
 import { z } from 'zod'
 import { stripCodeFence } from '../../utils/ai'
 
+const WWW_PREFIX_REGEX = /^www\./
+
 defineRouteMeta({
   openAPI: {
     description: 'Generate OpenGraph title and description using AI based on the URL',
@@ -32,7 +34,7 @@ function fallbackMetadata(url: string): { title: string, description: string } {
     const { hostname } = new URL(url)
 
     return {
-      title: hostname.replace(/^www\./, ''),
+      title: hostname.replace(WWW_PREFIX_REGEX, ''),
       description: `Short link for ${url}`,
     }
   }

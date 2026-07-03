@@ -4,6 +4,8 @@ import { ofetch } from 'ofetch'
 import { LinkCheckRequestSchema } from '#shared/schemas/link-check'
 import { toErrorMessage } from '#shared/utils/error'
 
+const DIGITS_ONLY_REGEX = /^\d+$/
+
 defineRouteMeta({
   openAPI: {
     description: 'Check target URLs for existing short links',
@@ -153,7 +155,7 @@ function isBlockedIpv4(hostname: string): boolean {
     return false
 
   const bytes = parts.map((part) => {
-    if (!/^\d+$/.test(part))
+    if (!DIGITS_ONLY_REGEX.test(part))
       return Number.NaN
 
     const value = Number(part)

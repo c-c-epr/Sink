@@ -48,7 +48,7 @@ export async function backupKVToR2(env: Cloudflare.Env, isManual: boolean = fals
     links: allLinks,
   }
 
-  const timestamp = now.toISOString().replace(/:/g, '-')
+  const timestamp = now.toISOString().replaceAll(':', '-')
   const prefix = isManual ? 'manual-links-' : 'links-'
   const filename = `backups/${prefix}${timestamp}.json`
 

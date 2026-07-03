@@ -1,6 +1,9 @@
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
+const TCO_URL_REGEX = /https:\/\/t\.co\/\w+/g
+const WHITESPACE_REGEX = /\s+/g
+
 // Tweet IDs to fetch
 const TWEET_IDS = [
   '1990813013247492308', // @xmok_
@@ -44,8 +47,8 @@ async function fetchTweet(id) {
 
   // Clean up tweet text: remove t.co links and extra whitespace
   const cleanContent = tweet.text
-    .replace(/https:\/\/t\.co\/\w+/g, '')
-    .replace(/\s+/g, ' ')
+    .replace(TCO_URL_REGEX, '')
+    .replace(WHITESPACE_REGEX, ' ')
     .trim()
 
   return {
